@@ -3,6 +3,9 @@
 /* --Root-- */
 :root {
   --font-family: "Montserrat", sans-serif;
+  --font-size-normal: .8em;
+  --font-size-small: .7em;
+  --font-size-large: 1.05em;
   --text-color: rgb(60, 60, 60);
   --text-color-light: rgb(255, 255, 255);
   --link-color-unvisited: rgba(62, 82, 89, 0.8);
@@ -24,7 +27,7 @@ html {
   width: 100vw;
   color: var(--text-color);
   font-family: var(--font-family);
-  font-size: 13px;
+  font-size: var(--font-size-normal);
   font-weight: 300;
   line-height: 1.2;
 }
@@ -55,12 +58,11 @@ ol {
 }
 
 ol li {
-  font-size: 13px;
+  font-size: var(--font-size-large);
 }
 
 li {
   margin-top: 0.5em;
-  /* font-size: 13px; */
 }
 
 /* --- Headings --- */
@@ -74,16 +76,9 @@ h1 {
 }
 
 h2 {
-  font-size: 1.7em;
+  font-size: 1.8em;
   font-weight: 200;
   line-height: 1.3;
-  margin: 0 0 0.5em;
-}
-
-h3 {
-  font-size: 1.35em;
-  font-weight: 300;
-  line-height: 1.2;
   margin: 0 0 0.5em;
 }
 
@@ -123,14 +118,14 @@ td {
 }
 
 th {
-  font-size: 12px;
+  font-size: var(--font-size-normal);
   font-weight: 400;
   text-align: left;
 }
 
 td {
   text-align: right;
-  font-size: 12px;
+  font-size: var(--font-size-normal);
 }
 
 tbody tr:nth-child(even) {
@@ -170,7 +165,7 @@ form {
 
 input {
   font-family: inherit;
-  font-size: 11px;
+  font-size: var(--font-size-small);
   padding: 0.5em;
   background-color: var(--input-background-color);
   border: var(--border);
