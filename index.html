@@ -8,23 +8,22 @@
     <title>Min yndlingsopskrift</title>
   </head>
   <body>
+    <main>
     <header>
-      <h1>Min yndlingsopskrift</h1>
-      <h2>Pandekager</h2>
+      <h1>Pandekager</h1>
     </header>
 
-    <main>
-      <section id="description">
+      <article class="grid-item-alt" id="description">
+        <article id="description-text">
         <h3>Beskrivelse:</h3>
         <p>
           Den evige klassiker! Pandekager er en nem og hurtig måde at lave en
           lækker morgenmad, dessert eller bare snack på. 
         </p>
-        
+        </article>
+
+        <article id="description-table">
         <table>
-            <caption>
-            Om opskriften:
-            </caption>
           <tbody>
           <tr>
             <th>Antal:</th>
@@ -40,10 +39,10 @@
           </tr>
           </tbody>
         </table>
+        </article>
+      </article>
 
-      </section>
-
-      <section id="ingredients">
+      <article class="grid-item" id="ingredients">
         <h3>Ingredienser:</h3>
         <ul>
           <li>6 Æg</li>
@@ -56,9 +55,9 @@
           <li>Skal af 1 citron</li>
           <li>Smør til stegning</li>
         </ul>
-      </section>
+      </article>
 
-      <section id="nutrition">
+      <article class="grid-item" id="nutrition">
         <h3>Næringsindhold:</h3>
         <table>
             <caption>
@@ -87,9 +86,9 @@
         <a
           href="https://www.fatsecret.dk/kalorier-ern%C3%A6ring/generisk/almindelige-pandekager?portionid=39147&portionamount=1,000"
           >Se eventuelt flere detaljer her</a>
-      </section>
+      </article>
 
-      <section id="instructions">
+      <article class="grid-item-alt" id="instructions">
         <h3>Fremgangsmåde:</h3>
         <ol>
           <li>Pisk æg, mælk og øl sammen.</li>
@@ -98,9 +97,9 @@
           <li>Riv skal af en citron i blandingen.</li>
           <li>Steg pandekagerne i smørret til de er gyldne.</li>
         </ol>
-      </section>
+      </article>
 
-        <section id="tips">
+        <article class="grid-item-alt" id="tips">
             <h3>Tips:</h3>
             <ul class="alt-ul">
             <li>
@@ -116,9 +115,9 @@
                 Øl kan udelades, men giver en mere sprød pandekage end ellers.
             </li>
             </ul>
-        </section>
+        </article>
 
-        <section id="toppings">
+        <article class="grid-item" id="toppings">
             <h3>Personlige favorit toppings:</h3>
             <ul class="alt-ul">
             <li>
@@ -135,16 +134,15 @@
             </li>
             </ul>
 
-        </section>
-    </main>
+        </article>
     <footer>
-        <!-- SoMe links etc -->
-        <section id="SoMe">
+        <!-- SoMe links -->
+        <article class="grid-item" id="some">
             <h4>
                 Følg mig:
             </h4>
-                <ul class="SoMe-list">
-                    <li class="SoMe-items">
+                <ul class="some-list">
+                    <li class="some-items">
                         <a href="https://www.facebook.com/" target="_blank">
                             <i class="fa-brands fa-square-facebook fa-2xl"></i>
                         </a>
@@ -170,18 +168,19 @@
                         </a>
                     </li>
                 </ul>
-        </section>
+        </article>
 
         <!-- Newsletter form - not working because HTML and CSS is in focus -->
-        <section id="newsletter">
+        <article class="grid-item" id="newsletter">
             <h4>Tilmeld dig nyhedsbrevet:</h4>
             <form action="#" method="POST">
                 <input type="text" name="name" id="name" placeholder="Navn" required>
                 <input type="email" name="email" id="email" placeholder="Email" required>
                 <input type="submit" value="Tilmeld">
             </form>
-        </section>
+        </article>
     </footer>
+    </main>
     <script src="https://kit.fontawesome.com/d632d8ce37.js" crossorigin="anonymous"></script>
   </body>
 </html>

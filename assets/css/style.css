@@ -1,46 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap");
 
-body {
-  background: #d3d3d3;
-  width: 100%;
-  color: #333;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+/* --Root-- */
+:root {
+  --font-family: "Montserrat", sans-serif;
+  --text-color: rgb(60, 60, 60);
+  --text-color-light: rgb(255, 255, 255);
+  --link-color-unvisited: rgba(62, 82, 89, 0.8);
+  --link-color-visited: rgba(62, 82, 89, 0.8);
+  --link-color-hover: rgba(35, 130, 115, 0.95);
+  --background-color: rgb(149, 149, 149);
+  --background-color-light: rgb(200, 200, 200);
+  --border: rgb(211, 211, 211) 1px solid;
+  --grid-article-background-color: rgba(255, 255, 255, 0.95);  
+  --grid-article-background-color-alt: rgba(255, 255, 255, 0.85);
+  --table-row-even-background-color: rgba(220, 220, 220, 0.6);
+  --table-row-odd-background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* --- General styling --- */
+html {
+  background: var(--background-color);
+  width: 100vw;
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: 12px;
   font-weight: 300;
-  line-height: 1.3;
+  line-height: 1.2;
+}
+
+body{
+  padding: 0;
   margin: 0;
 }
 
-h1 {
-  font-size: 2.5em;
-  font-weight: 100;
-  line-height: 1.2;
-  margin: 0 0 0.5em;
+article {
+  grid-area: article;
+  padding: 2.5em;
+  border-radius: .25em;
 }
 
-h2 {
-  font-size: 2em;
-  font-weight: 200;
-  line-height: 1.2;
-  margin: 0 0 0.5em;
-}
 
-h3 {
-  font-size: 1.5em;
-  font-weight: 300;
-  line-height: 1.2;
-  margin: 0 0 0.5em;
-}
-
-h4 {
-  font-size: 1.2em;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0 0 0.5em;
-}
 
 ul {
-  list-style-type: circle;
+  list-style-type: "• ";
   margin: 0 0 0 1em;
   padding: 0;
 }
@@ -55,57 +57,56 @@ li {
   margin-top: 0.5em;
 }
 
+/* --- Headings --- */
+h1 {
+  color: var(--text-color-light);
+  font-size: 3em;
+  font-weight: 200;
+  line-height: 1.2;
+  padding: 0.35em;
+  text-shadow: 2px 2px 2px #000;
+}
+
+h2 {
+  font-size: 1.7em;
+  font-weight: 200;
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+}
+
+h3 {
+  font-size: 1.35em;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+}
+
+h4 {
+  font-size: 1.1em;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0 0 0.5em;
+}
+
+/* --- Header --- */
 header {
+  grid-area: header;
+  text-transform: uppercase;
+  text-align: center;
   background-image: url("../img/pancakes.jpg"); /* The image used is free to use under the Unsplash License https://unsplash.com/photos/xrx6_WKJyfA */
   background-size: cover;
   background-position-x: center;
   background-position-y: 62%;
-  height: 12em;
-  width: 100%;
-  padding: 1em 0;
-  text-transform: uppercase;
-  text-align: center;
-}
-header h1 {
-  color: #fff;
-  font-size: 3.5em;
-  font-weight: 200;
-  line-height: 1.2;
-  margin: 0.35em;
-  text-shadow: 2px 2px 2px #000;
 }
 
-header h2 {
-  color: #fff;
-  font-size: 2.5em;
-  font-weight: 200;
-  line-height: 1.2;
-  margin: 0em;
-  text-shadow: 2px 2px 2px #000;
-}
-
-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 0.2em;
-}
-
-section {
-  padding: 3em;
-}
-
+/* --- Tables --- */
 table {
   margin-top: 0.3em;
   margin-bottom: 0.3em;
   table-layout: fixed;
-  width: 60%;
+  min-width: 80%;
   border-collapse: collapse;
-  border: #d3d3d3 1px solid;
-}
-
-caption {
-  text-align: left;
-  margin-bottom: 0.3em;
+  border: var(--border);
 }
 
 th,
@@ -126,45 +127,34 @@ td {
 }
 
 tbody tr:nth-child(even) {
-  background-color: #d3d3d3;
+  background-color: var(--table-row-even-background-color);
 }
 
+tbody tr:nth-child(odd) {
+  background-color: var(--table-row-odd-background-color);
+}
+
+/* --- Links --- */
+
 a {
-  color: #666;
   text-decoration: underline;
 }
 /* unvisited link */
 a:link {
-  color: #666;
+  color: var(--link-color-unvisited);
 }
 
 /* visited link */
 a:visited {
-  color: #666;
+  color: var(--link-color-visited);
 }
 
 /* mouse over link */
 a:hover {
-  color: lightblue;
+  color: var(--link-color-hover);
 }
 
-footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background: #d3d3d3;
-  color: #333;
-  height: 3em;
-  width: 100%;
-}
-
-footer section .Some {
-  padding: 0.5em 0em 1em 3em;
-}
-
-footer section .newsletter {
-  padding: 0.5em 3em 1em 0em;
-}
-
+/* --- Forms --- */
 form {
   display: grid;
   grid-template-columns: 2fr 2fr 1fr;
@@ -175,26 +165,176 @@ input {
   font-family: inherit;
   font-size: 11px;
   padding: 0.5em;
-  border: #666 1px solid;
+  border: var(--border);
   border-radius: 0.3em;
   margin: 0.2em;
 }
 
-#ingredients, #nutrition, #toppings {
-  background: #ffffff;
+/* --- Footer --- */
+
+footer {
+  grid-area: footer;
+  background: var(--background-color-light);
+  color: var(--text-color);
+  display: grid;
+  
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-areas:
+    "some" 
+    "newsletter";
+  grid-gap: 0.25em;
 }
 
-#instructions, #description, #tips {
-  background: #faf9f6;
+/* --- main CSS Grid --- */
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: .4fr repeat(6, 1fr) .2fr;
+  grid-template-areas:
+    "header"
+    "description"
+    "ingredients"
+    "instructions"
+    "nutrition"
+    "tips"
+    "toppings"
+    "footer";
+  grid-gap: 0.25em;
 }
 
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  grid-template-rows: .4fr 1fr 1fr 1fr .2fr;
+  grid-template-areas:
+    "header header"
+    "description ingredients"
+    "nutrition instructions"
+    "tips toppings"
+    "footer footer";
+  }
+  footer {
+  grid-area: footer;
+  background: var(--background-color-light);
+  color: var(--text-color);
+  display: grid;
+  
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-areas:
+    "some newsletter";
+  grid-gap: 0.25em;
+}
+}
+
+@media (min-width: 992px) {
+  main {
+    grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: .4fr 1fr 1fr .2fr;
+  grid-template-areas:
+    "header header header"
+    "description ingredients instructions"
+    "nutrition tips toppings"
+    "footer footer footer";
+  }
+}
+
+@media (min-width: 1280px) {
+  main {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: .4fr .4fr 1fr 1fr .2fr;
+  grid-template-areas:
+    "header header header header"
+    "description description description description"
+    "ingredients ingredients instructions instructions"
+    "nutrition nutrition tips toppings"
+    "footer footer footer footer";
+  }
+  #description {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "description-text description-table";
+    background-color: var(--grid-article-background-color);
+  }
+  #ingredients, #instructions {
+    background-color: var(--grid-article-background-color-alt);
+  }
+  #nutrition, #tips, #toppings {
+    background-color: var(--grid-article-background-color);
+  }
+}
+
+/* --- Id's --- */
+
+#description {
+  grid-area: description;
+}
+
+#description-text {
+  grid-area: description-text;
+  padding: 0 2.5em;
+}
+
+#description-table {
+  grid-area: description-table;
+  padding: 0 2.5em;
+}
+
+#ingredients {
+  grid-area: ingredients;
+}
+
+#nutrition {
+  grid-area: nutrition;
+}
+
+#instructions {
+  grid-area: instructions;
+}
+#tips {
+  grid-area: tips;
+}
+#toppings {
+  grid-area: toppings;
+}
+
+#some {
+  background-color: var(--background-color-light);
+  border: none;
+  grid-area: some;
+  margin: 0;
+  padding: 1.5em 3em;
+}
+
+#newsletter {
+  background-color: var(--background-color-light);
+  border: none;
+  grid-area: newsletter;
+  margin: 0;
+  padding: 1.5em 3em;
+}
+
+/* --- Classes --- */
+
+.grid-item {
+  background: var(--grid-article-background-color);
+  border: var(--border);
+}
+
+.grid-item-alt {
+  background: var(--grid-article-background-color-alt);
+  border: var(--border);
+}
 
 .alt-ul {
   list-style-type: none;
   margin: 0;
 }
 
-.SoMe-list {
+.some-list {
   display: grid;
   grid-template-columns: 2.5em 2.5em 2.5em 2.5em 2.5em;
   grid-gap: 0.1em;
