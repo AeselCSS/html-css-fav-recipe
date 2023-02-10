@@ -24,7 +24,7 @@ html {
   width: 100vw;
   color: var(--text-color);
   font-family: var(--font-family);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 300;
   line-height: 1.2;
 }
@@ -56,6 +56,7 @@ ol {
 
 li {
   margin-top: 0.5em;
+  font-size: 13px;
 }
 
 /* --- Headings --- */
@@ -63,7 +64,7 @@ h1 {
   color: var(--text-color-light);
   font-size: 3em;
   font-weight: 200;
-  line-height: 1.2;
+  line-height: 1.3;
   padding: 0.35em;
   text-shadow: 2px 2px 2px #000;
 }
@@ -71,7 +72,7 @@ h1 {
 h2 {
   font-size: 1.7em;
   font-weight: 200;
-  line-height: 1.2;
+  line-height: 1.3;
   margin: 0 0 0.5em;
 }
 
@@ -118,13 +119,14 @@ td {
 }
 
 th {
-  font-size: inherit;
-  font-weight: inherit;
+  font-size: 12px;
+  font-weight: 400;
   text-align: left;
 }
 
 td {
   text-align: right;
+  font-size: 12px;
 }
 
 tbody tr:nth-child(even) {
