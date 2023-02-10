@@ -256,6 +256,7 @@ main {
   #description {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 5.5em;
     grid-template-areas:
     "description-text description-table";
     background-color: var(--grid-article-background-color);
@@ -276,12 +277,12 @@ main {
 
 #description-text {
   grid-area: description-text;
-  padding: 0 2.5em;
+  padding: 0;
 }
 
 #description-table {
   grid-area: description-table;
-  padding: 0 2.5em;
+  padding: 0;
 }
 
 #ingredients {
