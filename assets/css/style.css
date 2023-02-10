@@ -11,6 +11,7 @@
   --background-color: rgb(149, 149, 149);
   --background-color-light: rgb(200, 200, 200);
   --border: rgb(211, 211, 211) 1px solid;
+  --input-background-color: rgb(235, 235, 235);
   --grid-article-background-color: rgba(255, 255, 255, 0.95);  
   --grid-article-background-color-alt: rgba(255, 255, 255, 0.85);
   --table-row-even-background-color: rgba(220, 220, 220, 0.6);
@@ -165,6 +166,7 @@ input {
   font-family: inherit;
   font-size: 11px;
   padding: 0.5em;
+  background-color: var(--input-background-color);
   border: var(--border);
   border-radius: 0.3em;
   margin: 0.2em;
