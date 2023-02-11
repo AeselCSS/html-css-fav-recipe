@@ -3,8 +3,8 @@
 /* --Root-- */
 :root {
   --font-family: "Montserrat", sans-serif;
-  --font-size-normal: .8em;
-  --font-size-small: .7em;
+  --font-size-normal: 0.8em;
+  --font-size-small: 0.7em;
   --font-size-large: 1.05em;
   --text-color: rgb(60, 60, 60);
   --text-color-light: rgb(255, 255, 255);
@@ -15,7 +15,7 @@
   --background-color-light: rgb(200, 200, 200);
   --border: rgb(211, 211, 211) 1px solid;
   --input-background-color: rgb(235, 235, 235);
-  --grid-article-background-color: rgba(255, 255, 255, 0.95);  
+  --grid-article-background-color: rgba(255, 255, 255, 0.95);
   --grid-article-background-color-alt: rgba(255, 255, 255, 0.85);
   --table-row-even-background-color: rgba(220, 220, 220, 0.6);
   --table-row-odd-background-color: rgba(255, 255, 255, 0.6);
@@ -32,7 +32,7 @@ html {
   line-height: 1.2;
 }
 
-body{
+body {
   padding: 0;
   margin: 0;
 }
@@ -40,10 +40,8 @@ body{
 article {
   grid-area: article;
   padding: 2.5em 1em 2.5em 2.5em;
-  border-radius: .25em;
+  border-radius: 0.25em;
 }
-
-
 
 ul {
   list-style-type: "• ";
@@ -112,9 +110,7 @@ table {
 
 th,
 td {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-right: 10px;
+  padding: .5em 1em;
 }
 
 th {
@@ -180,11 +176,10 @@ footer {
   background: var(--background-color-light);
   color: var(--text-color);
   display: grid;
-  
   grid-template-columns: 1fr;
   grid-auto-rows: 1fr;
   grid-template-areas:
-    "some" 
+    "some"
     "newsletter";
   grid-gap: 0.25em;
 }
@@ -195,7 +190,7 @@ main {
   min-width: 320px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: .4fr repeat(6, 1fr) .2fr;
+  grid-template-rows: 0.4fr repeat(6, 1fr) 0.2fr;
   grid-template-areas:
     "header"
     "description"
@@ -211,63 +206,64 @@ main {
 @media (min-width: 600px) {
   main {
     grid-template-columns: 1fr 1fr;
-  grid-template-rows: .4fr 1fr 1fr 1fr .2fr;
-  grid-template-areas:
-    "header header"
-    "description ingredients"
-    "nutrition instructions"
-    "tips toppings"
-    "footer footer";
+    grid-template-rows: 0.4fr 1fr 1fr 1fr 0.2fr;
+    grid-template-areas:
+      "header header"
+      "description ingredients"
+      "nutrition instructions"
+      "tips toppings"
+      "footer footer";
   }
   footer {
-  grid-area: footer;
-  background: var(--background-color-light);
-  color: var(--text-color);
-  display: grid;
-  
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 1fr;
-  grid-template-areas:
-    "some newsletter";
-  grid-gap: 0.25em;
-}
+    grid-area: footer;
+    background: var(--background-color-light);
+    color: var(--text-color);
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-areas: "some newsletter";
+    grid-gap: 0.25em;
+  }
 }
 
 @media (min-width: 1025px) {
   main {
     grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: .4fr 1fr 1fr .2fr;
-  grid-template-areas:
-    "header header header"
-    "description ingredients instructions"
-    "nutrition tips toppings"
-    "footer footer footer";
+    grid-template-rows: 0.4fr 1fr 1fr 0.2fr;
+    grid-template-areas:
+      "header header header"
+      "description ingredients instructions"
+      "nutrition tips toppings"
+      "footer footer footer";
   }
 }
 
 @media (min-width: 1281px) {
   main {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: .4fr .4fr 1fr 1fr .2fr;
-  grid-template-areas:
-    "header header header header"
-    "description description description description"
-    "ingredients ingredients instructions instructions"
-    "nutrition nutrition tips toppings"
-    "footer footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 0.4fr 1fr 1fr 0.2fr;
+    grid-template-areas:
+      "header header header header"
+      "description description description description"
+      "ingredients ingredients instructions instructions"
+      "nutrition nutrition tips toppings"
+      "footer footer footer footer";
   }
   #description {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 5.5em;
-    grid-template-areas:
-    "description-text description-table";
+    grid-template-areas: "description-text description-table";
     background-color: var(--grid-article-background-color);
   }
-  #ingredients, #instructions {
+  #ingredients,
+  #instructions {
     background-color: var(--grid-article-background-color-alt);
   }
-  #nutrition, #tips, #toppings {
+  #nutrition,
+  #tips,
+  #toppings {
     background-color: var(--grid-article-background-color);
   }
 }
